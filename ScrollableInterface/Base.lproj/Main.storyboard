@@ -12,15 +12,15 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollableInterface" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="899"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-Kk-6Oe">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-Kk-6Oe">
                                 <rect key="frame" x="0.0" y="59" width="320" height="825"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K8J-Km-xCM">
-                                        <rect key="frame" x="9" y="0.0" width="320" height="825"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8J-Km-xCM">
+                                        <rect key="frame" x="0.0" y="0.0" width="440.33333333333331" height="801"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sumanth" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-95-mTf">
                                                 <rect key="frame" x="8" y="8" width="86" height="34"/>
@@ -31,7 +31,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lc3-Ty-T2n">
-                                                <rect key="frame" x="124" y="8" width="188" height="34"/>
+                                                <rect key="frame" x="123.99999999999997" y="7.9999999999999964" width="308.33333333333326" height="55.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Lc3-Ty-T2n" secondAttribute="height" multiplier="94:17" id="Sbr-P8-f8d"/>
                                                 </constraints>
@@ -39,22 +39,25 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="family" translatesAutoresizingMaskIntoConstraints="NO" id="8e4-5m-9S8">
-                                                <rect key="frame" x="8" y="158" width="272" height="199"/>
+                                                <rect key="frame" x="20" y="167" width="272" height="199"/>
                                                 <gestureRecognizers/>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="m2S-VV-62R" appends="YES" id="ip4-Jw-8f4"/>
                                                 </connections>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tO-KO-e6X">
-                                                <rect key="frame" x="8" y="81" width="304" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tO-KO-e6X">
+                                                <rect key="frame" x="8" y="63" width="304" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="6tO-KO-e6X" secondAttribute="height" multiplier="304:35" id="OCB-Lq-hO1"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="send"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="show family"/>
+                                                <connections>
+                                                    <segue destination="Z9n-bl-AnN" kind="presentation" id="bRm-cK-3aE"/>
+                                                </connections>
                                             </button>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ei1-k2-DAe">
-                                                <rect key="frame" x="6" y="701" width="308" height="30"/>
+                                                <rect key="frame" x="6" y="701" width="428.33333333333331" height="30"/>
                                             </slider>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-bJ-Ivo">
                                                 <rect key="frame" x="161" y="766" width="144" height="35"/>
@@ -63,13 +66,21 @@
                                                 <buttonConfiguration key="configuration" style="tinted" title="Save Changes"/>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3sm-7J-l1i">
-                                                <rect key="frame" x="40" y="365" width="240" height="296"/>
+                                                <rect key="frame" x="40" y="365" width="360.33333333333331" height="296"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  First choos freeform from siimulates Scroll view to main view and empty view to scroll view. elements on view constarined to view sides</string>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-L9-4Xn">
+                                                <rect key="frame" x="8" y="106" width="304" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yqF-L9-4Xn" secondAttribute="height" multiplier="297:35" id="EUq-0q-Flg"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="show teddy"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -77,9 +88,12 @@
                                             <constraint firstItem="3sm-7J-l1i" firstAttribute="top" secondItem="8e4-5m-9S8" secondAttribute="bottom" constant="37" id="7xw-55-qm5"/>
                                             <constraint firstItem="Lc3-Ty-T2n" firstAttribute="leading" secondItem="IAS-95-mTf" secondAttribute="trailing" constant="30" id="FFW-Oy-4cT"/>
                                             <constraint firstAttribute="trailing" secondItem="ei1-k2-DAe" secondAttribute="trailing" constant="8" id="GBj-aH-NiY"/>
+                                            <constraint firstItem="yqF-L9-4Xn" firstAttribute="leading" secondItem="K8J-Km-xCM" secondAttribute="leading" constant="20" symbolic="YES" id="JWD-II-BrK"/>
                                             <constraint firstItem="8e4-5m-9S8" firstAttribute="top" secondItem="6tO-KO-e6X" secondAttribute="bottom" constant="42" id="QDo-87-OnV"/>
                                             <constraint firstItem="3sm-7J-l1i" firstAttribute="leading" secondItem="K8J-Km-xCM" secondAttribute="leading" constant="40" id="TJY-bT-cxx"/>
                                             <constraint firstItem="ei1-k2-DAe" firstAttribute="top" secondItem="3sm-7J-l1i" secondAttribute="bottom" constant="40" id="TSE-IH-R5X"/>
+                                            <constraint firstItem="yqF-L9-4Xn" firstAttribute="top" secondItem="6tO-KO-e6X" secondAttribute="bottom" constant="8" symbolic="YES" id="Viq-ny-ahn"/>
+                                            <constraint firstAttribute="trailing" secondItem="yqF-L9-4Xn" secondAttribute="trailing" constant="20" symbolic="YES" id="XHt-QU-KXk"/>
                                             <constraint firstItem="8e4-5m-9S8" firstAttribute="top" secondItem="K8J-Km-xCM" secondAttribute="top" constant="158" id="Yf8-94-41O"/>
                                             <constraint firstAttribute="bottom" secondItem="8e4-5m-9S8" secondAttribute="bottom" constant="473" id="asi-qv-Gqr"/>
                                             <constraint firstAttribute="trailing" secondItem="8e4-5m-9S8" secondAttribute="trailing" constant="40" id="bpI-go-UrX"/>
@@ -88,7 +102,9 @@
                                             <constraint firstAttribute="bottom" secondItem="3sm-7J-l1i" secondAttribute="bottom" constant="140" id="djp-4F-kXu"/>
                                             <constraint firstItem="IAS-95-mTf" firstAttribute="leading" secondItem="K8J-Km-xCM" secondAttribute="leading" constant="8" id="ee1-so-Xyz"/>
                                             <constraint firstItem="6tO-KO-e6X" firstAttribute="centerX" secondItem="K8J-Km-xCM" secondAttribute="centerX" id="fPs-Ws-GKY"/>
+                                            <constraint firstItem="8e4-5m-9S8" firstAttribute="top" secondItem="yqF-L9-4Xn" secondAttribute="bottom" constant="8" symbolic="YES" id="gHj-y1-SJJ"/>
                                             <constraint firstItem="6tO-KO-e6X" firstAttribute="width" secondItem="8e4-5m-9S8" secondAttribute="height" multiplier="152:85" id="iPv-qi-nUC"/>
+                                            <constraint firstAttribute="trailing" secondItem="yqF-L9-4Xn" secondAttribute="trailing" constant="199.66666666666669" id="jcW-DA-lhZ"/>
                                             <constraint firstAttribute="trailing" secondItem="Lc3-Ty-T2n" secondAttribute="trailing" constant="8" id="pyb-mC-QLI"/>
                                             <constraint firstItem="IAS-95-mTf" firstAttribute="top" secondItem="K8J-Km-xCM" secondAttribute="top" constant="8" id="urx-64-qGi"/>
                                             <constraint firstAttribute="trailing" secondItem="3sm-7J-l1i" secondAttribute="trailing" constant="40" id="vVH-KG-8by"/>
@@ -133,6 +149,37 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="93.129770992366403" y="3.1690140845070425"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Aiq-bn-jjy">
+            <objects>
+                <viewController keyboardType="off" id="Z9n-bl-AnN" customClass="SecondViewController" customModule="ScrollableInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UGD-J5-R5W">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56R-oS-2uo">
+                                <rect key="frame" x="28" y="59" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Close"/>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-PJ-EoQ">
+                                <rect key="frame" x="126" y="64" width="253" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="family" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-aX-L4l">
+                                <rect key="frame" x="28" y="143" width="349" height="402"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UW4-aq-UhV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9K-fC-ANt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="3"/>
         </scene>
     </scenes>
     <resources>

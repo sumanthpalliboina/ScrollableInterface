@@ -13,6 +13,7 @@
 		184B230F2BC68B7600DE99CD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 184B230E2BC68B7600DE99CD /* Base */; };
 		184B23112BC68B7800DE99CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B23102BC68B7800DE99CD /* Assets.xcassets */; };
 		184B23142BC68B7800DE99CD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 184B23132BC68B7800DE99CD /* Base */; };
+		186161132BC820AD008B6434 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186161122BC820AD008B6434 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		184B23102BC68B7800DE99CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184B23132BC68B7800DE99CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184B23152BC68B7800DE99CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186161122BC820AD008B6434 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		184B22FB2BC68B7600DE99CD = {
 			isa = PBXGroup;
 			children = (
+				186161122BC820AD008B6434 /* SecondViewController.swift */,
 				184B23062BC68B7600DE99CD /* ScrollableInterface */,
 				184B23052BC68B7600DE99CD /* Products */,
 			);
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186161132BC820AD008B6434 /* SecondViewController.swift in Sources */,
 				184B230C2BC68B7600DE99CD /* ViewController.swift in Sources */,
 				184B23082BC68B7600DE99CD /* AppDelegate.swift in Sources */,
 				184B230A2BC68B7600DE99CD /* SceneDelegate.swift in Sources */,
