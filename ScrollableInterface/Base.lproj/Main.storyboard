@@ -53,7 +53,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="show family"/>
                                                 <connections>
-                                                    <segue destination="Z9n-bl-AnN" kind="presentation" id="bRm-cK-3aE"/>
+                                                    <segue destination="Z9n-bl-AnN" kind="presentation" identifier="showFamily" id="bRm-cK-3aE"/>
                                                 </connections>
                                             </button>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ei1-k2-DAe">
@@ -80,6 +80,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="show teddy"/>
+                                                <connections>
+                                                    <segue destination="QE1-Qj-e02" kind="presentation" identifier="showTeddy" id="vaW-uV-Lzv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,31 +162,89 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56R-oS-2uo">
-                                <rect key="frame" x="28" y="59" width="67" height="35"/>
+                                <rect key="frame" x="310" y="59" width="67" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Close"/>
+                                <connections>
+                                    <action selector="discard:" destination="Z9n-bl-AnN" eventType="touchUpInside" id="mxi-Ts-O4q"/>
+                                    <segue destination="Kff-Zk-9sk" kind="unwind" identifier="removeFamily" unwindAction="goBackUsingUnwind:" id="kXX-6c-icM"/>
+                                </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-PJ-EoQ">
-                                <rect key="frame" x="126" y="64" width="253" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="family" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-aX-L4l">
                                 <rect key="frame" x="28" y="143" width="349" height="402"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-PJ-EoQ">
+                                <rect key="frame" x="39" y="62" width="253" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChangedSlider:" destination="Z9n-bl-AnN" eventType="valueChanged" id="ZD0-wL-5gD"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UW4-aq-UhV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="56R-oS-2uo" id="nu2-Ft-l4R"/>
+                        <outlet property="picture" destination="Mbl-aX-L4l" id="TAI-9v-PJk"/>
+                        <outlet property="slider" destination="1ob-PJ-EoQ" id="ezk-50-kmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9K-fC-ANt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Kff-Zk-9sk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="789" y="3"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="rQu-OR-X6k">
+            <objects>
+                <viewController id="QE1-Qj-e02" customClass="ThirdViewController" customModule="ScrollableInterface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PE6-7m-i1x">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="X3z-f4-BJv">
+                                <rect key="frame" x="16" y="59" width="271" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeValueSlider:" destination="QE1-Qj-e02" eventType="valueChanged" id="e3V-nA-9nF"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lch-B3-DHC">
+                                <rect key="frame" x="306" y="59" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Close"/>
+                                <connections>
+                                    <action selector="discard:" destination="QE1-Qj-e02" eventType="touchUpInside" id="qh5-UF-KDX"/>
+                                    <segue destination="mac-hE-mGL" kind="unwind" identifier="removeTeddy" unwindAction="goBackUsingUnwind:" id="XjA-o8-bzt"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teddy" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-iJ-pDw">
+                                <rect key="frame" x="16" y="146" width="357" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ji1-0x-SYE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="lch-B3-DHC" id="oDe-2H-y1Z"/>
+                        <outlet property="picture" destination="Ap5-iJ-pDw" id="eqk-cg-sJV"/>
+                        <outlet property="slider" destination="X3z-f4-BJv" id="5rn-wb-kQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7m-uH-S9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mac-hE-mGL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1544.2748091603053" y="2.8169014084507045"/>
         </scene>
     </scenes>
     <resources>
         <image name="family" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="teddy" width="85.333335876464844" height="85.333335876464844"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182E44632BC8ECCA0031552B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E44622BC8ECCA0031552B /* ThirdViewController.swift */; };
 		184B23082BC68B7600DE99CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B23072BC68B7600DE99CD /* AppDelegate.swift */; };
 		184B230A2BC68B7600DE99CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B23092BC68B7600DE99CD /* SceneDelegate.swift */; };
 		184B230C2BC68B7600DE99CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B230B2BC68B7600DE99CD /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182E44622BC8ECCA0031552B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		184B23042BC68B7600DE99CD /* ScrollableInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184B23072BC68B7600DE99CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184B23092BC68B7600DE99CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				184B23092BC68B7600DE99CD /* SceneDelegate.swift */,
 				184B230B2BC68B7600DE99CD /* ViewController.swift */,
 				184B230D2BC68B7600DE99CD /* Main.storyboard */,
+				182E44622BC8ECCA0031552B /* ThirdViewController.swift */,
 				184B23102BC68B7800DE99CD /* Assets.xcassets */,
 				184B23122BC68B7800DE99CD /* LaunchScreen.storyboard */,
 				184B23152BC68B7800DE99CD /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				186161132BC820AD008B6434 /* SecondViewController.swift in Sources */,
 				184B230C2BC68B7600DE99CD /* ViewController.swift in Sources */,
+				182E44632BC8ECCA0031552B /* ThirdViewController.swift in Sources */,
 				184B23082BC68B7600DE99CD /* AppDelegate.swift in Sources */,
 				184B230A2BC68B7600DE99CD /* SceneDelegate.swift in Sources */,
 			);

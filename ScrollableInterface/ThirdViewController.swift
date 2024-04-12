@@ -1,37 +1,35 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  ScrollableInterface
 //
-//  Created by Palliboina on 11/04/24.
+//  Created by Palliboina on 12/04/24.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
     @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet weak var slider: UISlider!
     
     @IBOutlet weak var picture: UIImageView!
-    @IBOutlet weak var slider: UISlider!
     
     var rating:Int = 0
     
-    @IBAction func discard(_ sender: UIButton) {
-        ///presentingViewController?.dismiss(animated: true)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         slider.value = Float(rating)
     }
     
 
-    @IBAction func valueChangedSlider(_ sender: UISlider) {
+    @IBAction func discard(_ sender: UIButton) {
+    }
+    @IBAction func changeValueSlider(_ sender: UISlider) {
         let value = round(sender.value)
         slider.value = value
         rating = Int(value)
-        
     }
     /*
     // MARK: - Navigation
